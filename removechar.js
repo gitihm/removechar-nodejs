@@ -1,7 +1,9 @@
-var str = "abc"
-
-remove = (str,ch) => {
-    for(key in str){
-        console.log("key "+key)
+exports =  remove = (data) => {
+    let newstr=""
+    for(key in data.str){
+        if(data.str[key]!=data.ch){
+            newstr =newstr+data.str.substr(key--,1)
+        }
     }
+    return newstr
 }
