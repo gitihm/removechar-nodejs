@@ -1,7 +1,17 @@
-var str = "abc"
+var str = "ab1234bc"
+var ch = "b"
+var newstr = ""
 
-remove = (str,ch) => {
+remove = () => {
+    let i=0,j=0
     for(key in str){
-        console.log("key "+key)
+        if(str[key]!=ch){
+            newstr =newstr+str.substr(key--,1)
+            console.log(str[key]) 
+    }
+    console.log(str)
+    console.log(newstr)
     }
 }
+
+remove()
